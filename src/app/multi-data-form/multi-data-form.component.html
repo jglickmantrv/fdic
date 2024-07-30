@@ -1,0 +1,41 @@
+<div>
+  <div>
+    <label for="">Customer Name</label>
+    <input type="text" [(ngModel)]="customerObject.name">
+  </div>
+  <div>
+    <label for="">Customer ID</label>
+    <input type="text" [(ngModel)]="customerObject.id">
+  </div>
+  <div>
+    <button (click)="loadCustomer()">Display Customer</button>
+  </div>
+  <div>
+    <button (click)="saveCustomer()">Save Customer</button>
+  </div>
+</div>
+<div>
+  <label for="">Order Name</label>
+  <input type="text" [(ngModel)]="customerOrderObject.name">
+</div>
+<div>
+<div>
+  <label for="">Order Amount</label>
+  <input type="text" [(ngModel)]="customerOrderObject.amount">
+</div>
+  <div>
+    <button (click)="addOrder()">Add Order</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Amount</th>
+      </tr>
+    </thead>
+    <tr *ngFor="let order of orderList">
+      <td>{{order.amount}}</td>
+    </tr>
+  </table>
+</div>
+
