@@ -57,7 +57,7 @@ export class MultiDataFormComponent {
       })
     };
     this.customerObject.mockOrders = this.orderList;
-    this.http.get("http://localhost:8080/customer", this.customerObject).subscribe((res: any)=>{
+    this.http.get("http://ec2-52-91-253-151.compute-1.amazonaws.com:8080/customer?id="+this.customerObject.id).subscribe((res: any)=>{
       console.log(JSON.stringify(res));
       if (res.result) {
         alert(res.message)
