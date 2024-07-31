@@ -43,7 +43,7 @@ export class MultiDataFormComponent {
       })
     };
     this.customerObject.mockOrders = this.orderList;
-    this.http.post("http://localhost:8080/customer", this.customerObject).subscribe((res: any)=>{
+    this.http.post("http://ec2-44-211-169-181.compute-1.amazonaws.com:8080/customer", this.customerObject).subscribe((res: any)=>{
       if (res.result) {
         alert(res.message)
       }
